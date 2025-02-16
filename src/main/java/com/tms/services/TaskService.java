@@ -21,7 +21,6 @@ public class TaskService {
         taskEntity.setTitle(taskDto.getTitle());
         taskEntity.setDescription(taskDto.getDescription());
         taskEntity.setStatus(taskDto.getStatus());
-        taskEntity.setCreatedAt(taskDto.getCreatedAt());
         taskRepository.save(taskEntity);
     }
 
@@ -45,7 +44,6 @@ public class TaskService {
             taskEntity.setTitle(taskDto.getTitle());
             taskEntity.setDescription(taskDto.getDescription());
             taskEntity.setStatus(taskDto.getStatus());
-            taskEntity.setCreatedAt(taskDto.getCreatedAt());
             taskRepository.save(taskEntity);
         }
 

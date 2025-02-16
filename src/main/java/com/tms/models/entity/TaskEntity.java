@@ -2,8 +2,9 @@ package com.tms.models.entity;
 
 import com.tms.models.Status;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "task")
@@ -14,7 +15,8 @@ public class TaskEntity {
     private String title;
     private String description;
     private Status status;
-    private Timestamp createdAt;
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 
 
     public Long getId() {
@@ -49,11 +51,11 @@ public class TaskEntity {
         this.status = status;
     }
 
-    public Timestamp getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 }

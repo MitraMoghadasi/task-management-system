@@ -2,14 +2,14 @@ package com.tms.models.dto;
 
 import com.tms.models.Status;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class GetTaskDto {
     private Long id;
     private String title;
     private String description;
     private Status status;
-    private Timestamp createdAt;
+    private LocalDateTime createdAt;
 
     public Long getId() {
         return id;
@@ -43,11 +43,11 @@ public class GetTaskDto {
         this.status = status;
     }
 
-    public Timestamp getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 }
